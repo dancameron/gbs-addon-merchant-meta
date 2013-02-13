@@ -14,10 +14,10 @@ Domain Path: /lang
 */
 
 add_action('plugins_loaded', 'gb_merchant_meta_adv');
-function gb_merchant_meta() {
+function gb_merchant_meta_adv() {
 	if (class_exists('Group_Buying_Controller')) {
 		require_once('merchantMeta.class.php');
-		require_once('library/template-tags.php');
+		require_once('lib/template-tags.php');
 		Group_Buying_Merchant_Meta_Addon::init();
 	}
 }
