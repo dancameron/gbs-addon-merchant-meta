@@ -50,7 +50,7 @@ class Group_Buying_Merchant_Meta extends Group_Buying_Controller {
 		);
 		$fields['financial_statement'] = array(
 			'weight' => 75,
-			'label' => self::__( 'Financial statement for current year' ),
+			'label' => self::__( 'Financial Statement for Current Year' ),
 			'type' => 'file',
 			'required' => TRUE,
 			'default' => '',
@@ -58,7 +58,7 @@ class Group_Buying_Merchant_Meta extends Group_Buying_Controller {
 		);
 		$fields['prev_financial_statement'] = array(
 			'weight' => 80,
-			'label' => self::__( 'Financial statement for last year' ),
+			'label' => self::__( 'Financial Statement for Last Year' ),
 			'type' => 'file',
 			'required' => TRUE,
 			'default' => '',
@@ -66,7 +66,7 @@ class Group_Buying_Merchant_Meta extends Group_Buying_Controller {
 		);
 		$fields['annual_report'] = array(
 			'weight' => 85,
-			'label' => self::__( 'Annual Report for last year' ),
+			'label' => self::__( 'Annual Report for Last Year' ),
 			'type' => 'file',
 			'required' => TRUE,
 			'default' => '',
@@ -82,7 +82,7 @@ class Group_Buying_Merchant_Meta extends Group_Buying_Controller {
 		);
 		$fields['board_members'] = array(
 			'weight' => 95,
-			'label' => self::__( 'Name list of staff and board members' ),
+			'label' => self::__( 'Name List of Staff and Board Members' ),
 			'type' => 'file',
 			'required' => TRUE,
 			'default' => '',
@@ -90,7 +90,7 @@ class Group_Buying_Merchant_Meta extends Group_Buying_Controller {
 		);
 		$fields['agreements'] = array(
 			'weight' => 100,
-			'label' => self::__( 'Agreement on Terms and Conditions (to be reviewed and electronically signed)' ),
+			'label' => self::__( 'Agreement on Terms and Conditions <i>(to be reviewed and electronically signed)</i>' ),
 			'type' => 'file',
 			'required' => TRUE,
 			'default' => '',
