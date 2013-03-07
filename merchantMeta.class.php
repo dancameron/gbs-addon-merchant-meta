@@ -94,7 +94,7 @@ class Group_Buying_Merchant_Meta extends Group_Buying_Controller {
 			'type' => 'file',
 			'required' => TRUE,
 			'default' => '',
-			'description' => gb__( 'Below this title, word file of terms and conditions of my org should be attached in order that applicants review. Terms and Conditions are not yet ready.' )
+			'description' => gb__( 'ADD WHATEVER HTML YOU WANT HERE. <a href="#">a link</a> <img src="url-to-word-file" />' )
 		);
 
 		$fields['phone']['required'] = TRUE;
@@ -102,12 +102,10 @@ class Group_Buying_Merchant_Meta extends Group_Buying_Controller {
 	}
 
 	public function process_post( Group_Buying_Merchant $merchant ) {
-		error_log( "files: " . print_r( $_FILES, true ) );
 		$merchant_id = $merchant->get_id();
 		if ( !empty( $_FILES['gb_contact_legal_docs'] ) ) {
 			// Set the uploaded field as an attachment
 			$attach_id = self::_set_attachement( 'gb_contact_legal_docs', $merchant_id );
-			error_log( "attach id: " . print_r( $attach_id, true ) );
 			self::set_legal_docs( $merchant_id, (int) $attach_id );
 		}
 		if ( !empty( $_FILES['gb_contact_financial_statement'] ) ) {
